@@ -116,7 +116,8 @@ test("comprobamos la suma de 0 + 0", () => {
   expect(suma(0, 0)).toBe(0);
 });
 test("comprobamos la suma de NaN", () => {
-  expect(suma(0, 0)).toBe(0);
+  expect(()=>suma(0/0, NaN)).toThrowError("debes introducir dos numeros");
+  
 });
 
 
